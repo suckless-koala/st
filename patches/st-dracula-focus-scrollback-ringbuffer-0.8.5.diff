@@ -1,12 +1,12 @@
---- st-orig/config.def.h	2023-09-08 13:22:24.845911161 +0100
-+++ st-new/config.def.h	2023-09-08 13:33:15.309225302 +0100
+--- a/config.def.h	2023-09-08 13:22:24.845911161 +0100
++++ b/config.def.h	2023-09-08 13:33:15.309225302 +0100
 @@ -94,36 +94,36 @@
  unsigned int tabspaces = 8;
- 
+
  /* bg opacity */
 -float alpha = 0.93, alphaUnfocused = 0.6;
 +float alpha = 1, alphaUnfocused = 0.85;
- 
+
  /* Terminal colors (16 first used in escape sequence) */
 +/* Dracula theme */
  static const char *colorname[] = {
@@ -62,8 +62,8 @@
 +    "#F8F8F2", /* foreground */
 +    "#282A36", /* background */
  };
- 
- 
+
+
 @@ -131,11 +131,11 @@
   * Default colors (colorname index)
   * foreground, background, cursor, reverse cursor
@@ -76,6 +76,6 @@
  static unsigned int defaultrcs = 257;
 -unsigned int bg = 0, bgUnfocused = 16;
 +unsigned int bg = 257, bgUnfocused = 257;
- 
+
  /*
   * Default shape of cursor

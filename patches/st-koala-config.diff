@@ -1,5 +1,5 @@
---- st-orig/config.def.h	2023-09-08 13:50:39.215861169 +0100
-+++ st-new/config.def.h	2023-09-08 13:54:49.149187128 +0100
+--- a/config.def.h	2023-09-08 13:50:39.215861169 +0100
++++ b/config.def.h	2023-09-08 13:54:49.149187128 +0100
 @@ -5,11 +5,10 @@
   *
   * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
@@ -12,12 +12,12 @@
 -/*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
 +    "NotoColorEmoji:pixelsize=16:antialias=true:autohint=true", /* Google Noto emoji fonts */
  };
- 
+
  static int borderpx = 2;
 @@ -196,22 +195,31 @@
  #define MODKEY Mod1Mask
  #define TERMMOD (ControlMask|ShiftMask)
- 
+
 +static char *openurlcmd[] = { "sh", "-c", "st-urlhandler -o", "externalpipe", NULL };
 +static char *copyurlcmd[] = { "sh", "-c", "st-urlhandler -c", "externalpipe", NULL };
 +static char *copyoutput[] = { "sh", "-c", "st-copyout", "externalpipe", NULL };
@@ -59,5 +59,5 @@
 +    { MODKEY,               XK_u,           externalpipe,   {.v = copyurlcmd } },
 +    { MODKEY,               XK_c,           externalpipe,   {.v = copyoutput } },
  };
- 
+
  /*
