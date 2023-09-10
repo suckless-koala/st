@@ -5,7 +5,7 @@
  	newline = 0;
  	for (n = 0; n < term.row; n++) {
 -		bp = term.line[n];
-+        bp = TLINE(n);
++       bp = TLINE(n);
  		lastpos = MIN(tlinelen(n) + 1, term.col) - 1;
  		if (lastpos < 0)
  			break;
@@ -14,7 +14,7 @@
  			if (xwrite(to[1], buf, utf8encode(bp->u, buf)) < 0)
  				break;
 -		if ((newline = term.line[n][lastpos].mode & ATTR_WRAP))
-+        if ((newline = TLINE(n)[lastpos].mode & ATTR_WRAP))
++       if ((newline = TLINE(n)[lastpos].mode & ATTR_WRAP))
  			continue;
  		if (xwrite(to[1], "\n", 1) < 0)
  			break;
