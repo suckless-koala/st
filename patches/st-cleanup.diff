@@ -1,0 +1,11 @@
+--- st-final/Makefile	2023-09-09 14:59:42.762373249 +0100
++++ st-new/Makefile	2023-09-08 13:54:49.145853794 +0100
+@@ -31,7 +31,7 @@
+ 	$(CC) -o $@ $(OBJ) $(STLDFLAGS)
+ 
+ clean:
+-	rm -f st $(OBJ) st-$(VERSION).tar.gz config.h *.orig *.rej
++	rm -f st $(OBJ) st-$(VERSION).tar.gz
+ 
+ dist: clean
+ 	mkdir -p st-$(VERSION)
